@@ -57,17 +57,24 @@ th, td {
     padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+td {
+        font-family: 'Exo', sans-serif;
+    font-size: 10pt;
+    }
+    
+tr:nth-child(even){
+    background-color: #f2f2f2}
 
 th {
-    background-color: #336699;
-    color: white;
+    background-color: #ababab;
+    color: black;
+    font-family: 'Exo', sans-serif;
 }
     
 *
     {
         font-family: 'PT Sans', sans-serif;
-        font-size: 10pt;
+        font-size: 11pt;
         line-height: 1.3;
     }
 h1{
@@ -116,8 +123,6 @@ h1{
 .iw-cm-menu li {
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
     list-style: none;
-    padding: 10px;
-    padding-right: 20px;
     border-bottom: 1px solid #c8c7cc;
     cursor: pointer;
     position: relative;
@@ -252,16 +257,27 @@ h1{
         <p style="content; font-size: 11pt;">
             
             
-            Depending on its context, an ambiguous word can refer to multiple, potentially unrelated, meanings. Mainstream static word embeddings are unable to reflect this dynamic semantic nature. Contextualised word embeddings are an attempt to addressing this limitation by computing dynamic representations for words which can adapt based on context.
+            Depending on its context, an ambiguous word can refer to multiple, potentially unrelated, meanings. Mainstream static word embeddings, such as <a href="https://code.google.com/archive/p/word2vec" target="#">Word2vec</a> and <a href="https://nlp.stanford.edu/projects/glove/" target="#">GloVe</a>, are unable to reflect this dynamic semantic nature. Contextualised word embeddings are an attempt at addressing this limitation by computing dynamic representations for words which can adapt based on context.
             <br/><br/>
             A system's task on the WiC dataset is to identify the intended meaning of words. WiC is framed as a binary classification task. Each instance in WiC has a target word <i>w</i>, either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond to the same meaning or not. 
             In fact, the dataset can also be viewed as an application of Word Sense Disambiguation in practise. 
         </p>
         
-        <p style="content; font-size: 11pt;">
-        Examples from the dataset:
-        </p>
+    
+         <p style="content; font-size: 11pt;">
+        WiC features multiple interesting characteristics: <br/>
+             <ul>
+            <li> It is suitable  for a  wide  range  of  applications,  including contextualized word and sense representation and Word  Sense  Disambiguation;</li>
+            <li> It  is  framed  asa  binary  classification  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;</li>
+            <li> It is constructed using high quality annotations curated by experts. </li>
+            </ul>
+                </p>
         
+         
+        <br/><br/>
+        <h2>Examples from the dataset</h2>
+        
+        <center>
         <table width="90%">
             <tbody><tr>
                 <th align="left">Label</th>
@@ -306,21 +322,13 @@ h1{
                 <td>You have a two-hour window of clear weather to finish working on the lawn</td>
             </tr>                   
                 
+        </tbody></table>
+            </center>
+        
 
                 
-        </tbody></table>
-        
         <br/><br/>
-        
-         <p style="content; font-size: 11pt;">
-        WiC features multiple interesting characteristics: <br/><br/>
-             (1) it is suitable  for a  wide  range  of  applications,  including contextualized word and sense representation and Word  Sense  Disambiguation;  <br/>
-            (2) It  is  framed  asa  binary  classification  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;<br/>
-            (3) It is constructed using high quality annotations curated by experts. <br/>
-                </p>
-                
-        <br/><br/>
-        <h2>Dataset Details</h2>
+        <h2>Dataset details</h2>
         Please see the following paper:
         <ul>
             <li>
@@ -406,7 +414,7 @@ h1{
         
               
         
-     <h2>Performance Upperbound</h2>           
+     <h2>Performance upperbound</h2>           
         
         <table width="40%" id="IAA">
             <tbody><tr>
