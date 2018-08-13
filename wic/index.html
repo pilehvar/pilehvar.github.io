@@ -1,1 +1,429 @@
-WiC: 10,000 Example Pairs for Evaluating Context-Sensitive Representations
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://people.ds.cam.ac.uk/mp792/card-660.html -->
+<html><head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123759115-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123759115-1');
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="./files/general.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<title>WiC: The Word-in-Context Dataset</title>
+<style type="text/css">/*
+ * contextMenu.js v 1.4.0
+ * Author: Sudhanshu Yadav
+ * s-yadav.github.com
+ * Copyright (c) 2013 Sudhanshu Yadav.
+ * Dual licensed under the MIT and GPL licenses
+**/
+
+table {
+    border-collapse: collapse;
+    border-collapse: collapse;
+}
+
+body{
+	background:#333333 url(files/page-bg.jpg);
+	margin:0px;
+    margin-bottom: 10px;
+    }
+
+a{
+        text-decoration: none;
+    }
+    
+a:link{
+        color:firebrick;
+    }
+    
+a:visited{
+        color:firebrick;
+    }
+a:hover{
+        color: deeppink;
+    }
+    
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #336699;
+    color: white;
+}
+    
+*
+    {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 10pt;
+        line-height: 1.3;
+    }
+h1{
+
+    font: 400 16px/20px 'Bree Serif', Georgia, serif;
+    font-size: 20pt;
+    margin-bottom: 30px;
+}
+ h2{
+
+    font: 400 16px/20px 'Bree Serif', Georgia, serif;
+    font-size: 16pt;
+    margin-bottom: 30px;
+}   
+    
+.iw-contextMenu {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10);
+    border: 1px solid #c8c7cc;
+    border-radius: 11px;
+    display: none;
+    z-index: 1000000132;
+    max-width: 300px;
+}
+
+.iw-cm-menu {
+    background: #fff;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.iw-curMenu {
+}
+
+.iw-cm-menu li {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+    list-style: none;
+    padding: 10px;
+    padding-right: 20px;
+    border-bottom: 1px solid #c8c7cc;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    margin: 0;
+    line-height: inherit;
+}
+
+.iw-cm-menu li:first-child {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.iw-cm-menu li:last-child {
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom: none;
+}
+
+.iw-mOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    opacity: .5;
+}
+
+.iw-contextMenu li.iw-mDisable {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.iw-mSelected {
+    background-color: #F6F6F6;
+}
+
+.iw-cm-arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #000;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.iw-mSelected > .iw-cm-arrow-right {
+}
+
+/*context menu css end */</style><style type="text/css">@-webkit-keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}</style><style type="text/css">/* This is not a zero-length file! */</style></head>
+<body>
+
+
+<div id="wrapper">
+    <header style="height: 80px; background-color:#222222">
+        <font color="white"><h1>WiC: The Word-in-Context Dataset</h1></font>
+        <div  style="width: 200px; margin-left: 20px; float: left; vertical-align: middle">
+            <a href="http://ltl.mml.cam.ac.uk/" title="Go to LTL homepage">
+                <!--<img src="./files/cambridge_logo_blue.png">-->
+            </a>
+        </div>
+        <div style="margin-left: 140px; margin-right: 30px; vertical-align: middle">
+        <!--<img id="ucam" src="./files/ltl_logo2.png" class="right" style="vertical-align: middle">-->
+        </div>
+        <br>
+    </header>
+
+    <div id="content">
+
+        
+        <br/>
+
+        <p style="content; font-size: 11pt;">
+            WiC is a novel dataset that provides a high-quality benchmark for the evaluation of context-sensitive word embeddings. 
+            WiC is as binary classification dataset. Each instance in WiC has a target word <i>w</i>, either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond to the same meaning or not. 
+        </p>
+        
+        <p style="content; font-size: 11pt;">
+        Examples from the dataset:
+        </p>
+        
+        <table width="90%">
+            <tbody><tr>
+                <th align="left">Label</th>
+                <th align="left">Target</th>
+                <th align="left">Context-1</th> 
+                <th align="left">Context-2</th>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>bed</td>
+                <td>There's a lot of trash on the bed of the river</td>
+                <td>I keep a glass of water next to my bed when I sleep</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>land</td>
+                <td>The pilot managed to land the airplane safely</td>
+                <td>The enemy landed several of our aircrafts</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>justify</td>
+                <td>Justify the margins</td>
+                <td>The end justifies the means</td>
+            </tr>
+             <tr>
+                <td>T</td>
+                <td>beat</td>
+                <td>We beat the competition</td>
+                <td>Agassi beat Becker in the tennis championship</td>
+            </tr>
+            <tr>
+                <td>T</td>
+                <td>air</td>
+                <td>Air pollution </td>
+                <td>Open a window and let in some air</td>
+            </tr>         
+            <tr>
+                <td>T</td>
+                <td>window</td>
+                <td>The expanded window will give us time to catch the thieves</td>
+                <td>You have a two-hour window of clear weather to finish working on the lawn</td>
+            </tr>                   
+                
+
+                
+        </tbody></table>
+        
+        <br/><br/>
+        
+         <p style="content; font-size: 11pt;">
+        WiC features multiple interesting characteristics: <br/><br/>
+             (1) it is suitable  for a  wide  range  of  applications,  including contextualized word and sense representation and Word  Sense  Disambiguation;  <br/>
+            (2) It  is  framed  asa  binary  classification  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;<br/>
+            (3) It is constructed using high quality annotations curated by experts. <br/>
+                </p>
+                
+        <br/><br/>
+        <h2>Dataset Details</h2>
+        Please see the following paper:
+        <ul>
+            <li>
+                <a href="">WiC: 10,000 Example Pairs for Evaluating Context-Sensitive Representations</a><br/>
+        M.T. Pilehvar and J. Camacho-Collados.<br/>
+        <a href="" title="Get the paper"><img src="./files/pdfs.png"></a>
+        <a href=""><img src="files/bibtex.png"></a>
+            </li>
+        </ul>
+            
+        
+        <br/><br/>
+        <h2>Download</h2>
+        <p>
+            
+        <div style="width: 50px; float: left; vertical-align: middle">
+            <a href="" title="Download the dataset">
+                <img src="./files/icon.png">
+            </a>
+        </div>
+        <div style="margin-left: 70px; vertical-align: middle;">
+        <ul>
+            <li>the <a href="card-660.zip">whole package</a>, </li>
+             <li>or individual files: [<a href="dataset.tsv">dataset.tsv</a>][<a href="README.txt">README.txt</a>][<a href="scores.tsv">scores.tsv</a>][<a href="similarity_scale.txt">similarity_scale.txt</a>]</li>
+            </ul>
+        </div>
+    
+
+        
+        
+        
+        <br/><br/>
+        <h2>State-of-the-Art</h2>
+        <p></p>
+
+            
+                <table width="50%">
+            <tbody><tr>
+                <th align="left">Model</th>
+                <th align="left">Accuracy</th>
+            </tr>
+            <tr>
+                <td>Context2vec</td>
+                <td>59.2</td>
+            </tr>
+            <tr>
+                <td>Elmo-3</td>
+                <td>57.4</td>
+            </tr>
+            <tr>
+                <td>Elmo-1</td>
+                <td>56.3</td>
+            </tr>
+            <tr>
+                <td>DeConf</td>
+                <td>59.4</td>
+            </tr>
+            <tr>
+                <td>SW2V</td>
+                <td>58.1</td>
+            </tr>
+            <tr>
+                <td>JBT</td>
+                <td>53.9</td>
+            </tr>
+            <tr>
+                <td>Sentence LSTM</td>
+                <td>53.2</td>
+            </tr>
+            <tr>
+                <td>Sentence BoW</td>
+                <td>59.3</td>
+            </tr>
+            <tr>
+                <td>Random baseline</td>
+                <td>50.0</td>
+            </tr>
+                
+                
+        </tbody></table>
+        
+        <br/><br/>
+        
+              
+        
+     <h2>Performance Upperbound</h2>           
+        
+        <table width="40%" id="IAA">
+            <tbody><tr>
+                <th align="left"></th>
+                <th align="left">Accuracy</th>
+            </tr>
+
+            <tr>
+                <td>Human-level performance</td>
+                <td>80.5</td>
+            </tr>
+                
+        </tbody></table>
+        
+    <br/><br/>
+        
+    <h2>References</h2>
+    <ul>
+    <li>[Context2vec]
+    Oren  Melamud,  Jacob  Goldberger,  and  Ido  Dagan. Context2vec: Learning generic context embedding with bidirectional LSTM. CoNLL 2016.</li>
+    <li>[Elmo] Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer. Deep contextualized word representations. NAACL 2018.</li>
+    <li>[DeConf] Mohammad Taher Pilehvar and Nigel Collier. De-Conflated Semantic Representations. EMNLP 2016.</li>
+    <li>[SW2V] Massimiliano Mancini, Jose Camacho-Collados, Ignacio Iacobacci, and Roberto Navigli. Embedding words and senses together via joint knowledge-enhanced training. CoNLL 2017.</li>
+    <li>[JBT] Maria Pelevina, Nikolay Arefyev, Chris Biemann, and Alexander Panchenko. Making sense of word embeddings. RepL4NLP 2016.</li>
+    </ul>
+    </p>
+    </div>
+    
+</div>    
+    <br/>
+    <br/>
+    <br/>
+
+
+
+
+</body></html>
