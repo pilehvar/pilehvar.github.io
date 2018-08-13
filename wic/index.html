@@ -12,7 +12,8 @@
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <link rel="stylesheet" href="./files/general.css" type="text/css" media="all">
-<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
@@ -71,9 +72,11 @@ th {
     }
 h1{
 
-    font: 400 16px/20px 'Bree Serif', Georgia, serif;
+    font: 800 16px/20px 'Exo', Georgia, serif;
     font-size: 20pt;
-    margin-bottom: 30px;
+    color: #FAD450;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
  h2{
 
@@ -81,6 +84,15 @@ h1{
     font-size: 16pt;
     margin-bottom: 30px;
 }   
+    
+ h3{
+
+    font: 400 16px/20px 'Exo', Georgia, serif;
+    color: #FAF5C6;
+    font-size: 14pt;
+     margin-top: 8px;
+    margin-bottom: 15px;
+}  
     
 .iw-contextMenu {
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10);
@@ -220,6 +232,7 @@ h1{
 <div id="wrapper">
     <header style="height: 80px; background-color:#222222">
         <font color="white"><h1>WiC: The Word-in-Context Dataset</h1></font>
+        <font color="white"><h3>A reliable benchmark for the evaluation of context-sensitive word embeddings</h3></font>
         <div  style="width: 200px; margin-left: 20px; float: left; vertical-align: middle">
             <a href="http://ltl.mml.cam.ac.uk/" title="Go to LTL homepage">
                 <!--<img src="./files/cambridge_logo_blue.png">-->
@@ -237,8 +250,12 @@ h1{
         <br/>
 
         <p style="content; font-size: 11pt;">
-            WiC is a novel dataset that provides a high-quality benchmark for the evaluation of context-sensitive word embeddings. 
-            WiC is as binary classification dataset. Each instance in WiC has a target word <i>w</i>, either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond to the same meaning or not. 
+            
+            
+            Depending on its context, an ambiguous word can refer to multiple, potentially unrelated, meanings. Mainstream static word embeddings are unable to reflect this dynamic semantic nature. Contextualised word embeddings are an attempt to addressing this limitation by computing dynamic representations for words which can adapt based on context.
+            <br/><br/>
+            A system's task on the WiC dataset is to identify the intended meaning of words. WiC is framed as a binary classification task. Each instance in WiC has a target word <i>w</i>, either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond to the same meaning or not. 
+            In fact, the dataset can also be viewed as an application of Word Sense Disambiguation in practise. 
         </p>
         
         <p style="content; font-size: 11pt;">
