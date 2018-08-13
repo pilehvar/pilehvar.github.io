@@ -49,7 +49,7 @@ header {
 }
 
 #content {
-	padding: 25px 10px 50px 25px
+	padding: 25px 40px 50px 40px
 }
 
 #content, #wrapper {
@@ -236,7 +236,6 @@ ul {
 }
 
 ul ul, ol ol  {
-	font-size: 0.9em;
 	margin-top: 0.5em;
 	margin-left: 1.25em;
 }
