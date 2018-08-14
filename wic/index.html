@@ -267,14 +267,14 @@ h1{
          <p style="content; font-size: 11pt;">
         WiC features multiple interesting characteristics: <br/>
              <ul>
-            <li> It is suitable  for a  wide  range  of  applications,  including contextualized word and sense representation and Word  Sense  Disambiguation;</li>
-            <li> It  is  framed  asa  binary  classification  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;</li>
-            <li> It is constructed using high quality annotations curated by experts. </li>
+            <li> It is suitable  for evaluating a  wide  range  of  applications,  including <u>contextualized word</u> and sense representation and <u>Word  Sense  Disambiguation</u>;</li>
+            <li> It  is  framed  asa <u>binary  classification</u>  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;</li>
+            <li> It is constructed using <u>high quality annotations</u> curated by experts. </li>
             </ul>
                 </p>
         
          
-        <br/><br/>
+        <br/>
         <h2>Examples from the dataset</h2>
         
         <center>
@@ -288,38 +288,38 @@ h1{
             <tr>
                 <td>F</td>
                 <td>bed</td>
-                <td>There's a lot of trash on the bed of the river</td>
-                <td>I keep a glass of water next to my bed when I sleep</td>
+                <td>There's a lot of trash on the <u>bed</u> of the river</td>
+                <td>I keep a glass of water next to my <u>bed</u> when I sleep</td>
             </tr>
             <tr>
                 <td>F</td>
                 <td>land</td>
-                <td>The pilot managed to land the airplane safely</td>
-                <td>The enemy landed several of our aircrafts</td>
+                <td>The pilot managed to <u>land</u> the airplane safely</td>
+                <td>The enemy <u>landed</u> several of our aircrafts</td>
             </tr>
             <tr>
                 <td>F</td>
                 <td>justify</td>
-                <td>Justify the margins</td>
-                <td>The end justifies the means</td>
+                <td><u>Justify</u> the margins</td>
+                <td>The end <u>justifies</u> the means</td>
             </tr>
              <tr>
                 <td>T</td>
                 <td>beat</td>
-                <td>We beat the competition</td>
-                <td>Agassi beat Becker in the tennis championship</td>
+                <td>We <u>beat</u> the competition</td>
+                <td>Agassi <u>beat</u> Becker in the tennis championship</td>
             </tr>
             <tr>
                 <td>T</td>
                 <td>air</td>
-                <td>Air pollution </td>
-                <td>Open a window and let in some air</td>
+                <td><u>Air</u> pollution </td>
+                <td>Open a window and let in some <u>air</u></td>
             </tr>         
             <tr>
                 <td>T</td>
                 <td>window</td>
-                <td>The expanded window will give us time to catch the thieves</td>
-                <td>You have a two-hour window of clear weather to finish working on the lawn</td>
+                <td>The expanded <u>window</u> will give us time to catch the thieves</td>
+                <td>You have a two-hour <u>window</u> of clear weather to finish working on the lawn</td>
             </tr>                   
                 
         </tbody></table>
@@ -327,7 +327,7 @@ h1{
         
 
                 
-        <br/><br/>
+        <br/>
         <h2>Dataset details</h2>
         Please see the following paper:
         <ul>
@@ -340,7 +340,7 @@ h1{
         </ul>
             
         
-        <br/><br/>
+        <br/>
         <h2>Download</h2>
         <p>
             
@@ -365,10 +365,10 @@ h1{
         <p></p>
 
             
-                <table width="50%">
+                <table width="60%">
             <tbody><tr>
-                <th align="left">Model</th>
-                <th align="left">Accuracy</th>
+                <th align="left" width="70%">Contextualised word embeddings</th>
+                <th align="left">Accuracy percentage</th>
             </tr>
             <tr>
                 <td>Context2vec</td>
@@ -382,6 +382,13 @@ h1{
                 <td>Elmo-1</td>
                 <td>56.3</td>
             </tr>
+            </tbody></table>
+            
+            <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Sense representations</th>
+                <th align="left"></th>
+            </tr>
             <tr>
                 <td>DeConf</td>
                 <td>59.4</td>
@@ -394,6 +401,14 @@ h1{
                 <td>JBT</td>
                 <td>53.9</td>
             </tr>
+            </tbody></table>
+            
+            <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Sentence level baselines</th>
+                <th align="left"></th>
+            </tr>        
+                
             <tr>
                 <td>Sentence LSTM</td>
                 <td>53.2</td>
@@ -401,15 +416,17 @@ h1{
             <tr>
                 <td>Sentence BoW</td>
                 <td>59.3</td>
-            </tr>
-            <tr>
-                <td>Random baseline</td>
-                <td>50.0</td>
-            </tr>
-                
+            </tr>            
                 
         </tbody></table>
-        
+    
+        <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Random baseline</th>
+                <th align="left">50.0</th>
+            </tr>  
+        </tbody></table>
+    
         <br/><br/>
         
               
