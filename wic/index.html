@@ -254,9 +254,8 @@ h1{
         
         <br/>
 
-        <p style="content; font-size: 11pt;">
-            
-            
+        <div style="float: left; width: 60%;">
+        <p style="content; font-size: 11pt;"> 
             Depending on its context, an ambiguous word can refer to multiple, potentially unrelated, meanings. Mainstream static word embeddings, such as <a href="https://code.google.com/archive/p/word2vec" target="#">Word2vec</a> and <a href="https://nlp.stanford.edu/projects/glove/" target="#">GloVe</a>, are unable to reflect this dynamic semantic nature. Contextualised word embeddings are an attempt at addressing this limitation by computing dynamic representations for words which can adapt based on context.
             <br/><br/>
             A system's task on the WiC dataset is to identify the intended meaning of words. WiC is framed as a binary classification task. Each instance in WiC has a target word <i>w</i>, either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond to the same meaning or not. 
@@ -267,17 +266,52 @@ h1{
          <p style="content; font-size: 11pt;">
         WiC features multiple interesting characteristics: <br/>
              <ul>
-            <li> It is suitable  for evaluating a  wide  range  of  applications,  including <u>contextualized word</u> and sense representation and <u>Word  Sense  Disambiguation</u>;</li>
+            <li> It is suitable  for evaluating a  wide  range  of  applications,  including <u>contextualized word and sense representation</u> and <u>Word  Sense  Disambiguation</u>;</li>
             <li> It  is  framed  asa <u>binary  classification</u>  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;</li>
             <li> It is constructed using <u>high quality annotations</u> curated by experts. </li>
             </ul>
                 </p>
-        
-         
+        </div>
+    
+        <div style="margin-left: 600px; margin-right: 20px; vertical-align: middle;">
         <br/>
+        <h2>Download</h2>
+        <p>
+            
+        <div style="width: 50px; float: left; vertical-align: middle">
+            <a href="" title="Download the dataset">
+                <img src="./files/icon.png">
+            </a>
+        </div>
+        <div style="margin-left: 70px; vertical-align: middle;">
+        <ul>
+            <li>the <a href="card-660.zip">whole package</a>, </li>
+             <li>or individual files: [<a href="dataset.tsv">train.tsv</a>][<a href="README.txt">README.txt</a>]</li>
+            </ul>
+        </div>
+
+    
+                    
+        <br/><br/>
+        <h2>Dataset details</h2>
+        Please see the following paper:
+        <ul>
+            <li>
+                <a href="">WiC: 10,000 Example Pairs for Evaluating Context-Sensitive Representations</a><br/>
+        M.T. Pilehvar and J. Camacho-Collados.<br/>
+        <a href="" title="Get the paper"><img src="./files/pdfs.png"></a>
+        <a href=""><img src="files/bibtex.png"></a>
+            </li>
+        </ul>
+            
+        </div>
+
+    
+         
+        <br/><br/><br/>
         <h2>Examples from the dataset</h2>
         
-        <center>
+
         <table width="90%">
             <tbody><tr>
                 <th align="left">Label</th>
@@ -323,41 +357,8 @@ h1{
             </tr>                   
                 
         </tbody></table>
-            </center>
-        
 
-                
-        <br/>
-        <h2>Dataset details</h2>
-        Please see the following paper:
-        <ul>
-            <li>
-                <a href="">WiC: 10,000 Example Pairs for Evaluating Context-Sensitive Representations</a><br/>
-        M.T. Pilehvar and J. Camacho-Collados.<br/>
-        <a href="" title="Get the paper"><img src="./files/pdfs.png"></a>
-        <a href=""><img src="files/bibtex.png"></a>
-            </li>
-        </ul>
-            
-        
-        <br/>
-        <h2>Download</h2>
-        <p>
-            
-        <div style="width: 50px; float: left; vertical-align: middle">
-            <a href="" title="Download the dataset">
-                <img src="./files/icon.png">
-            </a>
-        </div>
-        <div style="margin-left: 70px; vertical-align: middle;">
-        <ul>
-            <li>the <a href="card-660.zip">whole package</a>, </li>
-             <li>or individual files: [<a href="dataset.tsv">train.tsv</a>][<a href="README.txt">README.txt</a>]</li>
-            </ul>
-        </div>
-    
 
-        
         
         
         <br/><br/>
