@@ -279,16 +279,20 @@ h1{
         <p>
             
         <div style="width: 50px; float: left; vertical-align: middle">
-            <a href="" title="Download the dataset">
+            <a href="package/WiC_dataset.zip" title="Download the dataset">
                 <img src="./files/icon.png">
             </a>
         </div>
         <div style="margin-left: 70px; vertical-align: middle;">
         <ul>
-            <li>the <a href="card-660.zip">whole package</a>, </li>
-             <li>or individual files: [<a href="dataset.tsv">train.tsv</a>][<a href="README.txt">README.txt</a>]</li>
+            <li>the <a href="package/WiC_dataset.zip">whole package</a>, </li>
+             <li>or individual files: 
+                 <br/>[<a href="package/train/train.data.txt">train.data.txt</a>][<a href="package/train/train.gold.txt">train.gold.txt</a>]
+                 <br/>[<a href="package/dev/dev.data.txt">dev.data.txt</a>][<a href="package/dev/dev.data.txt">dev.data.txt</a>]
+                 <br/>[<a href="package/README.txt">README.txt</a>]</li>
             </ul>
         </div>
+        NOTE: the <i>test</i> set to be released in a shared task (details soon to be announced here). Meanwhile, you might use the development set for your evaluations.
 
     
                     
@@ -412,11 +416,11 @@ h1{
                 
             <tr>
                 <td>Sentence Bag-of-words</td>
-                <td>53.2</td>
+                <td>59.3</td>
             </tr>
             <tr>
                 <td>Sentence LSTM</td>
-                <td>59.3</td>
+                <td>53.2</td>
             </tr>            
                 
         </tbody></table>
