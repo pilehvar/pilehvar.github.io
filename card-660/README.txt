@@ -20,6 +20,8 @@ The package contains the following files:
 
 For more information, please see:
 
-Card-660: Cambridge Rare Word Dataset -- a Reliable Benchmark forInfrequent Word Representation Models. 
+Card-660: Cambridge Rare Word Dataset - a Reliable Benchmark for Infrequent Word Representation Models. 
 M.T. Pilehvar, D. Kartsaklis, V. Prokhorov, and N. Collier.
 EMNLP 2018.
+
+https://pilehvar.github.io/card-660/
