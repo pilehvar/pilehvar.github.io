@@ -1,0 +1,7 @@
+@InProceedings{pilehvar-etal:2018,
+  author    = {Pilehvar, Mohammad Taher and Kartsaklis, Dimitri and Prokhorov, Victor and Collier, Nigel},
+  title     = {{Card-660: Cambridge Rare Word Dataset} -- a Reliable Benchmark for Infrequent Word Representation Models},
+  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2018},
+  address   = {Brussels, Belgium},
+}
