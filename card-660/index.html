@@ -252,13 +252,39 @@ h1{
         <p style="content; font-size: 11pt;"> Card-660 is a challenging, yet reliable, benchmark for the evaluation of subword and rare word representation techniques. The dataset provides multiple advantages over existing benchmarks, including a very high inter-annotator agreement (IAA) of <a href="#IAA">around 0.90</a>, which is substantially higher than that for existing rare word datasets (Stanford Rare Word Similarity, with an <a href="https://medium.com/@taher.pilevar/is-the-stanford-rare-word-similarity-dataset-a-reliable-evaluation-benchmark-3fe409053011" target="#">estimated</a> IAA of 0.41).</p>
         <p style="content; font-size: 11pt;">The huge gap between state of the art and IAA (more than 0.50 in terms of Spearman correlation) promises a challenging dataset with lots of potential for future research. Card-660 covers a wide range of domains, including IT and technology, slang and abbreviations, movies and entertainment, politics, chemistry, and medicine.</p>
         
+    
+        </div>
+        
+        <div style="float: left; width: 60%;">    
         <br/>
+        <h2>Download</h2>
+    
+        <table><tr>
+        <td>
+    
+            <a href="card-660.zip" title="Download the dataset">
+                <img src="./files/icon.png" float: left;>
+            </a>
+        </td>
+        <td>    
+        <div style="margin-left: 0px; float: left; vertical-align: middle;">
+        <ul >
+            <li>The <a href="card-660.zip">whole package</a>, </li>
+             <li>or individual files: [<a href="README.txt">README.txt</a>][<a href="dataset.tsv">dataset.tsv</a>][<a href="scores.tsv">scores.tsv</a>][<a href="similarity_scale.txt">similarity_scale.txt</a>]</li>
+        </ul>
+        </div>
+        </td>
+        </tr>
+        </table>
+        
+        <br><br>
+        <div style="margin-left: 20px; width: 70%; float: left; vertical-align: middle;">
         M.T. Pilehvar, D. Kartsaklis, V. Prokhorov, and N. Collier.<br/>
-        <a href="Card-660.pdf">Card-660: Cambridge Rare Word Dataset -- a Reliable Benchmark for Infrequent Word Representation Models.</a> EMNLP 2018, Brussels, Belgium.<br>
+        <a href="Card-660.pdf">Card-660: Cambridge Rare Word Dataset -- a Reliable Benchmark for Infrequent Word Representation Models.</a><br/> EMNLP 2018, Brussels, Belgium.<br><br>
         <a href="Card-660.pdf" title="Get the paper"><img src="./files/pdfs.png"></a>
         <a href="card-660.txt"><img src="files/bibtex.png"></a>
-            
         </div>
+            </div> 
 
         <div style="margin-left: 600px; margin-right: 20px; vertical-align: middle;">
         <br/>
@@ -266,28 +292,32 @@ h1{
         <img src="files/variance.png" alt="Annotation Variance" height="250"><br/>
         <div style="font-size: 9pt; margin-top: 10px;">
         Annotation  variance  for  word  pairs  across Card-660, SimVerb-3500 and Stanford Rare Word Similarity (RW) datasets.  Average variance for Card-660 is 1.47,  which  is  significantly  lower  than  those  for  SV-3500 and RW: 5.64 and 6.34, respectively.
+            
+                <p style="content; font-size: 11pt;">
+            <br>
+        Examples from the dataset (similarity scale [0-4]):
+        </p>
+        <center>
+        <table>
+            <tr><td>sleepwalking</td><td>somnambulists</td><td>3.88</td></tr>
+            <tr><td>2mro</td><td>tomorrow</td><td>4.00</td></tr>
+            <tr><td>currency</td><td>concurrency</td><td>0.13  </td></tr>
+            <tr><td>must-see</td><td>interesting</td><td>3.06  </td></tr>
+            <tr><td>carbinolamine</td><td>hemiaminal</td><td>3.88</td></tr>
+            <tr><td>biting_point</td><td>clutch</td><td>2.19</td></tr>
+            <tr><td>random_seed</td><td>BiLSTM</td><td>1.56</td></tr>
+            <tr><td>black_hole</td><td>blackmail</td><td>0.06</td></tr>
+        </table>
+        </center>
+            
         </div>
         </center>
         </div>
         
-        <br/><br/>
-        <h2>Download</h2>
-        <p>
+        
+
             
-        <div style="width: 50px; float: left; vertical-align: middle">
-            <a href="" title="Download the dataset">
-                <img src="./files/icon.png">
-            </a>
-        </div>
-        <div style="margin-left: 70px; vertical-align: middle;">
-        <ul>
-            <li>the <a href="card-660.zip">whole package</a>, </li>
-             <li>or individual files: [<a href="README.txt">README.txt</a>][<a href="dataset.tsv">dataset.tsv</a>][<a href="scores.tsv">scores.tsv</a>][<a href="similarity_scale.txt">similarity_scale.txt</a>]</li>
-            </ul>
-        </div>
-    
-        
-        
+        <div style="float: left; margin-bottom: 50px; width: 100%;">
         <br/><br/>
         <h2>State-of-the-Art</h2>
         <p></p>
@@ -338,9 +368,10 @@ h1{
             </tr>
                 
         </tbody></table>
-        
+        </div>
         <br/>
         
+    
         <table width="80%">
             <tbody><tr>
                 <th align="left">Rare Word Representation Model</th>
