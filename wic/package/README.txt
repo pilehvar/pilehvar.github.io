@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------
-	WiC: 10,000 Example Pairs for Evaluating Context-Sensitive Representations
+    WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations
 --------------------------------------------------------------------------------------------------
 
 This package contains the WiC dataset for evaluating contextualized word representations. 
@@ -29,5 +29,19 @@ contains two files, with the same number of lines (each line corresponds to an i
 
 For further details, please see https://pilehvar.github.io/wic/
 
-NOTE: the test data is kept for the evaluation of a public competition (details to be announced on 
-      the website). Meanwhile, you might use the development set for your evaluations.
+NOTE 1: The gold test labels are kept secret as it is being used as the basis for a public competition 
+      	in CodaLab: https://competitions.codalab.org/competitions/20010
+
+NOTE 2: The WiC dataset is also used as a part of a challenge co-located with the SemDeep workshop at 
+        IJCAI 2019. More information at http://www.dfki.de/~declerck/semdeep-5/challenge.html
+
+====================================================================================================
+REFERENCE PAPER
+====================================================================================================
+
+When using this dataset, please refer to the following paper:
+
+	Mohammad Taher Pilehvar and Jose Camacho-Collados,
+	WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations,
+	In Proceedings of NAACL 2019 (short), Minneapolis, USA. 
+
