@@ -10,6 +10,19 @@
 
   gtag('config', 'UA-123759115-1');
 </script>
+	
+<script>
+$(function() {
+   $( "#openDialog").on("click", function(){ 
+       $( "#dialog-modal" ).dialog({
+          height: 140,
+          modal: true
+        });
+       $( "#dialog-modal" ).show();
+    });
+ });
+</script>
+	
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <link rel="stylesheet" href="./files/general.css" type="text/css" media="all">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -312,7 +325,7 @@ h1{
             <li>
                 <a href="https://arxiv.org/abs/1808.09121">WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations</a><br/>
         M.T. Pilehvar and J. Camacho-Collados, NAACL 2019 (Minneapolis, USA).<br/>
-        <a href="https://arxiv.org/abs/1808.09121" title="Get the paper"><img src="./files/pdfs.png"></a>
+        <a href="https://arxiv.org/pdf/1808.09121" title="Get the paper"><img src="./files/pdfs.png"></a>
         <!--<a href=""><img src="files/bibtex.png"></a>-->
             </li>
         </ul>
@@ -374,8 +387,79 @@ h1{
         <h2>State-of-the-Art</h2>
         <p></p>
 
+	       <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Contextualised word embeddings</th>
+                <th align="left">Accuracy percentage</th>
+            </tr>
+            <tr>
+                <td>Context2vec</td>
+                <td>59.7</td>
+            </tr>
+            <tr>
+                <td>Elmo-3</td>
+                <td>56.3</td>
+            </tr>
+            <tr>
+                <td>Elmo-1</td>
+                <td>57.1</td>
+            </tr>
+	    <tr>
+                <td>BERT-large</td>
+                <td>63.8</td>
+            </tr>
+            <tr>
+                <td>BERT-base</td>
+                <td>63.6</td>
+            </tr>
+		    
+            <tr>
+                <td>Elmo-1</td>
+                <td>57.1</td>
+            </tr>
+            </tbody></table>
             
-                <table width="60%">
+            <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Sense representations</th>
+                <th align="left"></th>
+            </tr>
+            <tr>
+                <td>DeConf</td>
+                <td>62.1</td>
+            </tr>
+            <tr>
+                <td>SW2V</td>
+                <td>59.1</td>
+            </tr>
+            <tr>
+                <td>JBT</td>
+                <td>54.5</td>
+            </tr>
+            </tbody></table>
+            
+            <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Sentence level baselines</th>
+                <th align="left"></th>
+            </tr>        
+                
+            <tr>
+                <td>Sentence Bag-of-words</td>
+                <td>61.0</td>
+            </tr>
+            <tr>
+                <td>Sentence LSTM</td>
+                <td>53.1</td>
+            </tr>            
+                
+        </tbody></table>
+	
+	<a href="#" id="openDialog">View results for old version</a> 
+	
+	<div id="dialog-modal" title="Results on preliminary version of WiC" style="display:none">
+            
+        <table width="60%">
             <tbody><tr>
                 <th align="left" width="70%">Contextualised word embeddings</th>
                 <th align="left">Accuracy percentage</th>
@@ -429,6 +513,8 @@ h1{
             </tr>            
                 
         </tbody></table>
+		
+	</div>
     
         <table width="60%">
             <tbody><tr>
