@@ -12,15 +12,14 @@
 </script>
 	
 <script>
-$(function() {
-   $( "#openDialog").on("click", function(){ 
-       $( "#dialog-modal" ).dialog({
-          height: 140,
-          modal: true
-        });
-       $( "#dialog-modal" ).show();
-    });
- });
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 </script>
 	
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -455,9 +454,36 @@ h1{
                 
         </tbody></table>
 	
-	<a href="#" id="openDialog">View results for old version</a> 
+	 <table width="60%">
+		    <tbody><tr>
+			<th align="left" width="70%">Random baseline</th>
+			<th align="left">50.0</th>
+		    </tr>  
+		</tbody></table>
+
+		<br/><br/>
+
+
+
+	     <h2>Performance upperbound</h2>           
+
+		<table width="40%" id="IAA">
+		    <tbody><tr>
+			<th align="left"></th>
+			<th align="left">Accuracy</th>
+		    </tr>
+
+		    <tr>
+			<td>Human-level performance</td>
+			<td>80.5</td>
+		    </tr>
+
+		</tbody></table>
+
+	    <br/><br/>
 	
-	<div id="dialog-modal" title="Results on preliminary version of WiC" style="display:none">
+	<button onclick="myFunction()">View results for old version</button><br/>
+	<div id="myDIV" title="Results on preliminary version of WiC" style="display:none">
             
         <table width="60%">
             <tbody><tr>
@@ -516,33 +542,7 @@ h1{
 		
 	</div>
     
-        <table width="60%">
-            <tbody><tr>
-                <th align="left" width="70%">Random baseline</th>
-                <th align="left">50.0</th>
-            </tr>  
-        </tbody></table>
-    
-        <br/><br/>
-        
-              
-        
-     <h2>Performance upperbound</h2>           
-        
-        <table width="40%" id="IAA">
-            <tbody><tr>
-                <th align="left"></th>
-                <th align="left">Accuracy</th>
-            </tr>
-
-            <tr>
-                <td>Human-level performance</td>
-                <td>80.5</td>
-            </tr>
-                
-        </tbody></table>
-        
-    <br/><br/>
+       
         
     <h2>References</h2>
     <ul>
