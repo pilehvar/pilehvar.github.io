@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://people.ds.cam.ac.uk/mp792/card-660.html -->
+<html><head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123759115-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123759115-1');
+</script>
+	
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="./files/general.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<title>WiC: The Word-in-Context Dataset</title>
+<style type="text/css">/*
+ * contextMenu.js v 1.4.0
+ * Author: Sudhanshu Yadav
+ * s-yadav.github.com
+ * Copyright (c) 2013 Sudhanshu Yadav.
+ * Dual licensed under the MIT and GPL licenses
+**/
+
+table {
+    border-collapse: collapse;
+    border-collapse: collapse;
+}
+
+body{
+	background:#333333 url(files/page-bg.jpg);
+	margin:0px;
+    margin-bottom: 10px;
+    }
+
+a{
+        text-decoration: none;
+    }
+    
+a:link{
+        color:firebrick;
+    }
+    
+a:visited{
+        color:firebrick;
+    }
+a:hover{
+        color: deeppink;
+    }
+    
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+        font-family: 'Exo', sans-serif;
+    font-size: 10pt;
+    }
+    
+tr:nth-child(even){
+    background-color: #f2f2f2}
+
+th {
+    background-color: #ababab;
+    color: black;
+    font-family: 'Exo', sans-serif;
+}
+    
+*
+    {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 11pt;
+        line-height: 1.3;
+    }
+h1{
+
+    font: 800 16px/20px 'Exo', Georgia, serif;
+    font-size: 20pt;
+    color: #FAD450;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+ h2{
+
+    font: 400 16px/20px 'Bree Serif', Georgia, serif;
+    font-size: 16pt;
+    margin-bottom: 30px;
+}   
+    
+ h3{
+
+    font: 400 16px/20px 'Exo', Georgia, serif;
+    color: #FAF5C6;
+    font-size: 14pt;
+     margin-top: 8px;
+    margin-bottom: 15px;
+}  
+    
+.iw-contextMenu {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10);
+    border: 1px solid #c8c7cc;
+    border-radius: 11px;
+    display: none;
+    z-index: 1000000132;
+    max-width: 300px;
+}
+
+.iw-cm-menu {
+    background: #fff;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.iw-curMenu {
+}
+
+.iw-cm-menu li {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+    list-style: none;
+    border-bottom: 1px solid #c8c7cc;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    margin: 0;
+    line-height: inherit;
+}
+
+.iw-cm-menu li:first-child {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.iw-cm-menu li:last-child {
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom: none;
+}
+
+.iw-mOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    opacity: .5;
+}
+
+.iw-contextMenu li.iw-mDisable {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.iw-mSelected {
+    background-color: #F6F6F6;
+}
+
+.iw-cm-arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #000;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.iw-mSelected > .iw-cm-arrow-right {
+}
+
+/*context menu css end */</style><style type="text/css">@-webkit-keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}</style><style type="text/css">/* This is not a zero-length file! */</style></head>
+<body>
+
+
+<div id="wrapper">
+    <header style="height: 80px; background-color:#222222">
+        <font color="white"><h1>WiC: The Word-in-Context Dataset</h1></font>
+        <font color="white"><h3>A reliable benchmark for the evaluation of context-sensitive word embeddings</h3></font>
+        <div  style="width: 200px; margin-left: 20px; float: left; vertical-align: middle">
+            <a href="http://ltl.mml.cam.ac.uk/" title="Go to LTL homepage">
+                <!--<img src="./files/cambridge_logo_blue.png">-->
+            </a>
+        </div>
+        <div style="margin-left: 140px; margin-right: 30px; vertical-align: middle">
+        <!--<img id="ucam" src="./files/ltl_logo2.png" class="right" style="vertical-align: middle">-->
+        </div>
+        <br>
+    </header>
+
+    <div id="content">
+
+        
+        <br/>
+
+        <div style="float: left; width: 60%;">
+        <p style="content; font-size: 11pt;"> 
+            Depending on its context, an ambiguous word can refer to multiple, potentially unrelated, meanings. Mainstream static word embeddings, such as <a href="https://code.google.com/archive/p/word2vec" target="#">Word2vec</a> and <a href="https://nlp.stanford.edu/projects/glove/" target="#">GloVe</a>, are unable to reflect this dynamic semantic nature. Contextualised word embeddings are an attempt at addressing this limitation by computing dynamic representations for words which can adapt based on context.
+            <br/><br/>
+            A system's task on the WiC dataset is to identify the intended meaning of words. WiC is framed as a binary classification task. Each instance in WiC has a target word <i>w</i>, either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond to the same meaning or not. 
+            In fact, the dataset can also be viewed as an application of Word Sense Disambiguation in practise. 
+        </p>
+        
+    
+         <p style="content; font-size: 11pt;">
+        WiC features multiple interesting characteristics: <br/>
+             <ul>
+            <li> It is suitable  for evaluating a  wide  range  of  applications,  including <u>contextualized word and sense representation</u> and <u>Word  Sense  Disambiguation</u>;</li>
+            <li> It  is  framed  asa <u>binary  classification</u>  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;</li>
+            <li> It is constructed using <u>high quality annotations</u> curated by experts. </li>
+            </ul>
+                </p>
+        </div>
+    
+        <div style="margin-left: 600px; margin-right: 20px; vertical-align: middle;">
+        <br/>
+        <h2>Download</h2>
+        <p>
+            
+        <div style="width: 50px; float: left; vertical-align: middle">
+            <a href="package/WiC_dataset.zip" title="Download the dataset">
+                <img src="./files/icon.png">
+            </a>
+        </div>
+        <div style="margin-left: 70px; vertical-align: middle;">
+        <ul>
+            <li>the <a href="package/WiC_dataset.zip">whole package (v1.0)</a>, </li>
+	    <li> the <a href="package/README.txt">README</a> file. </li>
+     <!---        <li>or individual files: 
+                 <br/>[<a href="package/train/train.data.txt">train.data.txt</a>][<a href="package/train/train.gold.txt">train.gold.txt</a>]
+                 <br/>[<a href="package/dev/dev.data.txt">dev.data.txt</a>]
+                 <br/>[<a href="package/README.txt">README.txt</a>]</li> --->
+            </ul>
+        </div>
+            <br/>
+        <font color="red"><b>Participate</b></font> in WiC's CodaLab competition: submit your results on the test set and see where you stand in the leaderboard!
+        <br/>Link: <a href="https://competitions.codalab.org/competitions/20010">WiC CodaLab Competition</a>
+        <br/><br/>
+        WiC is featured as a part of the <a href="https://super.gluebenchmark.com/" target="#">SuperGLUE benchmark</a>.
+		<br>
+		<a href="https://super.gluebenchmark.com/" target="#"><img width="170" src="https://super.gluebenchmark.com/assets/images/superglue_logo.svg"></img></a>
+        <br/><br/>
+	WiC was also used for a shared task at <a href="http://www.dfki.de/~declerck/semdeep-5/">SemDeep-5 IJCAI workshop</a>. 
+		
+	
+
+    
+        
+            
+        </div>
+
+        <br/><br/><br/><br/><br/><br/>
+        <h2>Dataset details</h2>
+        Please see the following paper:
+        <ul>
+            <li>
+                <a href="https://arxiv.org/abs/1808.09121">WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations</a><br/>
+        M.T. Pilehvar and J. Camacho-Collados, NAACL 2019 (Minneapolis, USA).<br/>
+		    <i>Note: Results slightly differ between NAACL and Arxiv versions of the paper. Please take results in the Arxiv version, which is more up to date, as baseline for your evaluations.</i><br/>
+        <a href="https://arxiv.org/pdf/1808.09121" title="Get the paper"><img src="./files/pdfs.png"></a>
+        <!--<a href=""><img src="files/bibtex.png"></a>-->
+            </li>
+        </ul>
+         
+        <br/>
+        <h2>Examples from the dataset</h2>
+        
+
+        <table width="90%">
+            <tbody><tr>
+                <th align="left">Label</th>
+                <th align="left">Target</th>
+                <th align="left">Context-1</th> 
+                <th align="left">Context-2</th>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>bed</td>
+                <td>There's a lot of trash on the <u>bed</u> of the river</td>
+                <td>I keep a glass of water next to my <u>bed</u> when I sleep</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>land</td>
+                <td>The pilot managed to <u>land</u> the airplane safely</td>
+                <td>The enemy <u>landed</u> several of our aircrafts</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>justify</td>
+                <td><u>Justify</u> the margins</td>
+                <td>The end <u>justifies</u> the means</td>
+            </tr>
+             <tr>
+                <td>T</td>
+                <td>beat</td>
+                <td>We <u>beat</u> the competition</td>
+                <td>Agassi <u>beat</u> Becker in the tennis championship</td>
+            </tr>
+            <tr>
+                <td>T</td>
+                <td>air</td>
+                <td><u>Air</u> pollution </td>
+                <td>Open a window and let in some <u>air</u></td>
+            </tr>         
+            <tr>
+                <td>T</td>
+                <td>window</td>
+                <td>The expanded <u>window</u> will give us time to catch the thieves</td>
+                <td>You have a two-hour <u>window</u> of clear weather to finish working on the lawn</td>
+            </tr>                   
+                
+        </tbody></table>
+
+
+        
+        
+        <br/><br/>
+        <h2>State-of-the-Art</h2>
+        <p></p>
+
+	       <table width="70%">
+            <tbody><tr>
+                <th align="left" width="50%">Sentence-level contextualised embeddings</th>
+		<th align="left" width="30%">Implementation</th>
+                <th align="left">Accuracy %</th>
+            </tr> 
+	    <tr>
+		<td><a href="https://arxiv.org/abs/1908.05646" target="#">SenseBERT-large</a>&#8224;</td>
+   		<td>Levine et al (2019)</td>
+                <td><b>72.1</b></td>
+            </tr>
+	   
+	    <tr>
+		<td><a href="https://arxiv.org/abs/1909.04164" target="#">KnowBERT-W+W</a>&#8224;</td>
+   		<td>Peters et al (2019)</td>
+                <td>70.9</td>
+            </tr>
+            <tr>
+		<td><a href="https://arxiv.org/abs/1907.11692" target="#">RoBERTa</a></td>
+   		<td>Liu et al (2019)</td>
+                <td>69.9</td>
+            </tr>
+            <tr>
+		<td><a href="https://super.gluebenchmark.com/leaderboard" target="#">BERT-large</a></td>
+   		<td>Wang et al (2019)</td>
+                <td>69.6</td>
+            </tr>
+            <tr>
+                <td>Ensemble</td>
+   		<td>Gari Soler et al (2019)</td>
+                <td>66.7</td>
+            </tr>
+	    <tr>
+                <td>ELMo-weighted</td>
+      		<td>Ansell et al (2019)</td>
+                <td>61.2</td>
+            </tr>
+	</tbody></table>    
+		    
+		    
+	       <table width="70%">
+            <tbody><tr>
+                <th align="left" width="50%">Word-level contextualised embeddings</th>
+		<th align="left" width="30%">Implementation</th>
+                <th align="left">Accuracy %</th>
+            </tr>   
+            <tr>
+		<td><a href="https://www.aclweb.org/anthology/P19-1569/" target="#">WSD</a>&#8224;</td>
+   		<td>Loureiro and Jorge (2019)</td>
+                <td>67.7</td>
+            </tr>
+	   <tr>
+                <td>BERT-large</td>
+      		<td>WiC's paper</td>
+                <td>65.5</td>
+            </tr>
+
+	    <tr>
+                <td>Context2vec</td>
+   		<td>WiC's paper</td>
+                <td>59.3</td>
+            </tr>   
+	   
+            <tr>
+                <td>Elmo</td>
+       		<td>WiC's paper</td>
+                <td>57.7</td>
+            </tr>
+		    
+            </tbody></table>
+            
+            <table width="70%">
+            <tbody><tr>
+                <th align="left" width="50%">Sense representations</th>
+		<th align="left" width="30%"></th>
+                <th align="left"></th>
+            </tr>
+            
+            <tr>
+	        <td><a href="https://www.mitpressjournals.org/doi/abs/10.1162/COLI_a_00375" target="#">LessLex</a></td>
+	        <td>Colla et al (2020)</td>
+                <td>59.2</td>
+            </tr>
+            
+            <tr>
+                <td>DeConf</td>
+       		<td>WiC's paper</td>
+                <td>58.7</td>
+            </tr>
+            <tr>
+                <td>SW2V</td>
+       		<td>WiC's paper</td>
+                <td>58.1</td>
+            </tr>
+            <tr>
+                <td>JBT</td>
+       		<td>WiC's paper</td>
+                <td>53.6</td>
+            </tr>
+            </tbody></table>
+            
+            <table width="70%">
+            <tbody><tr>
+                <th align="left" width="50%">Sentence level baselines</th>
+                <th align="left" width="30%"></th>
+                <th align="left"></th>
+            </tr>        
+                
+            <tr>
+                <td>Sentence Bag-of-words</td>
+       		<td>WiC's paper</td>
+                <td>58.7</td>
+            </tr>
+            <tr>
+                <td>Sentence LSTM</td>
+       		<td>WiC's paper</td>
+                <td>53.1</td>
+            </tr>            
+                
+        </tbody></table>
+	
+	 <table width="70%">
+		    <tbody><tr>
+			<th align="left" width="50%">Random baseline</th>
+			<th align="left" width="30%"></th>
+			<th align="left">50.0</th>
+		    </tr>  
+		</tbody></table>
+&#8224; Use external knowledge resources
+		<br/><br/>
+
+
+
+	     <h2>Performance upperbound</h2>           
+
+		<table width="40%" id="IAA">
+		    <tbody><tr>
+			<th align="left"></th>
+			<th align="left">Accuracy %</th>
+		    </tr>
+
+		    <tr>
+			<td>Human-level performance</td>
+			<td>80.0</td>
+		    </tr>
+
+		</tbody></table>
+
+	    <br/><br/>
+	
+	<button onclick="myFunction()">View results for the old version (v0.1)</button><br/><br/>
+	<div id="myDIV" title="Results on preliminary version of WiC" style="display:none;">
+            
+        <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Contextualised word embeddings</th>
+                <th align="left">Accuracy percentage</th>
+            </tr>
+            <tr>
+                <td>Context2vec</td>
+                <td>59.2</td>
+            </tr>
+            <tr>
+                <td>Elmo-3</td>
+                <td>57.4</td>
+            </tr>
+            <tr>
+                <td>Elmo-1</td>
+                <td>56.3</td>
+            </tr>
+            </tbody></table>
+            
+            <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Sense representations</th>
+                <th align="left"></th>
+            </tr>
+            <tr>
+                <td>DeConf</td>
+                <td>59.4</td>
+            </tr>
+            <tr>
+                <td>SW2V</td>
+                <td>58.1</td>
+            </tr>
+            <tr>
+                <td>JBT</td>
+                <td>53.9</td>
+            </tr>
+            </tbody></table>
+            
+            <table width="60%">
+            <tbody><tr>
+                <th align="left" width="70%">Sentence level baselines</th>
+                <th align="left"></th>
+            </tr>        
+                
+            <tr>
+                <td>Sentence Bag-of-words</td>
+                <td>59.3</td>
+            </tr>
+            <tr>
+                <td>Sentence LSTM</td>
+                <td>53.2</td>
+            </tr>            
+                
+        </tbody></table>
+		
+	</div>
+    
+      <br/>
+    <h2>Licensing</h2>
+	
+	This dataset is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" target="#">Creative Commons Attribution-NonCommercial 4.0 License</a>.
+
+	<br/>
+    <h2>References</h2>
+    <ul>
+<li>[LessLex] Davide Colla, Enrico Mensa and Daniele P. Radicioni. LessLex: Linking Multilingual Embeddings to SenSe Representations of LEXical Items. Computational Linguistics, 2020.</li>
+<li>[SenseBERT] Yoav Levine, Barak Lenz, Or Dagan, Dan Padnos, Or Sharir, Shai Shalev-Shwartz, Amnon Shashua, Yoav Shoham. SenseBERT: Driving Some Sense into BERT. Arxiv 2019. </li>  
+    <li>[KnowBERT] Matthew E. Peters, Mark Neumann, Robert Logan, Roy Schwartz, Vidur Joshi, Sameer Singh, Noah A. Smith. Knowledge Enhanced Contextual Word Representations. EMNLP 2019. </li>
+	    <li>[RoBERTa] Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov. RoBERTa: A Robustly Optimized BERT Pretraining Approach. Arxiv 2019. </li>  
+    <li>[BERT] Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. arXiv:1810.04805 2018.</li>
+    <li>[Context2vec]
+    Oren  Melamud,  Jacob  Goldberger,  and  Ido  Dagan. Context2vec: Learning generic context embedding with bidirectional LSTM. CoNLL 2016.</li>
+    <li>[Elmo] Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer. Deep contextualized word representations. NAACL 2018.</li>
+    <li>[DeConf] Mohammad Taher Pilehvar and Nigel Collier. De-Conflated Semantic Representations. EMNLP 2016.</li>
+    <li>[SW2V] Massimiliano Mancini, Jose Camacho-Collados, Ignacio Iacobacci, and Roberto Navigli. Embedding words and senses together via joint knowledge-enhanced training. CoNLL 2017.</li>
+    <li>[JBT] Maria Pelevina, Nikolay Arefyev, Chris Biemann, and Alexander Panchenko. Making sense of word embeddings. RepL4NLP 2016.</li>
+    <li>[WSD] Daniel Loureiro and Alípio Jorge. LIAAD at SemDeep-5 Challenge:  Word-in-Context (WiC). SemDeep 2019.</li>
+    <li>[Ensemble] Aina Garí Soler, Marianna Apidianaki and Alexandre Allauzen. LIMSI-MULTISEM at the IJCAI SemDeep-5 WiC Challenge: Context Representations for Word Usage Similarity Estimation. SemDeep 2019.</li>
+    <li>[ELMo-weighted] Alan Ansell, Felipe Bravo-Marquez and Bernhard Pfahringer. An ELMo-inspired approach to SemDeep-5's Word-in-Context task. SemDeep 2019.</li>
+    <li>[SuperGLUE] Alex Wang, Yada Pruksachatkun, Nikita Nangia, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, Samuel R. Bowman. SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems.</li>
+    </ul>
+    </p>
+    </div>
+    
+</div>    
+    <br/>
+    <br/>
+    <br/>
+
+
+
+
+</body></html>
