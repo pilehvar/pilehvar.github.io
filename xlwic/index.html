@@ -270,16 +270,49 @@ h1{
 
         <div style="float: left; width: 60%;">
         <p style="content; font-size: 11pt;"> 
-            Depending on its context, an ambiguous word can refer to multiple, potentially unrelated, meanings. Mainstream static word embeddings, such as <a href="https://code.google.com/archive/p/word2vec" target="#">Word2vec</a> and <a href="https://nlp.stanford.edu/projects/glove/" target="#">GloVe</a>, are unable to reflect this dynamic semantic nature. Contextualised word embeddings are an attempt at addressing this limitation by computing dynamic representations for words which can adapt based on context.
+            Contextualised word embeddings are nowadays pervasive across NLP applications and have shown to effectively
+            capture meanings distinctions of the same word in different sentences. Similarly, multilingual models
+            proved to be able to encode words in their contexts in a space that is shared across hundreds of
+            languages.
             <br/><br/>
-            A system's task on the WiC dataset is to identify the intended meaning of words. WiC is framed as a binary classification task. Each instance in WiC has a target word <i>w</i>, either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond to the same meaning or not. 
-            In fact, the dataset can also be viewed as an application of Word Sense Disambiguation in practise. 
+            A system's task on any of the XL-WiC datasets is to identify the intended meaning of a word in a context
+            of a given language.
+            XL-WiC is framed as a binary classification task. Each instance in XL-WiC has a target word <i>w</i>,
+            either a verb or a noun, for which two contexts are provided. Each of these contexts triggers a specific
+            meaning of <i>w</i>. The task is to identify if the occurrences of <i>w</i> in the two contexts correspond
+            to the same meaning or not.
+            XL-WiC provides test sets in the following 13 languages:
+            <ul>
+            <li>Bulgiarian (BG)</li>
+            <li>English (EN) -- same as WiC --</li>
+            <li>Danish (DA)</li>
+            <li>German (DE)</li>
+            <li>Estonian (ET)</li>
+            <li>Farsi (FA)</li>
+            <li>French (FR)</li>
+            <li>Croatian (HR)</li>
+            <li>Italian (IT)</li>
+            <li>Japanese (JA)</li>
+            <li>Korean (KO)</li>
+            <li>Dutch (NL)</li>
+            <li>Chinese (ZH)</li>
+            </ul>
+            and training sets in the following 4 languages:
+            <ul>
+                <li>German (DE)</li>
+                <li>English (EN)</li>
+                <li>French (FR)</li>
+                <li>Italian (IT)</li>
+            </ul>
+
         </p>
         
     
          <p style="content; font-size: 11pt;">
-        WiC features multiple interesting characteristics: <br/>
+        XL-WiC features multiple interesting characteristics: <br/>
              <ul>
+            <li> It is multilingual, hence, it is suitable for evaluation cross-lingual and multilingual
+                semantic capabilities of models.</li>
             <li> It is suitable  for evaluating a  wide  range  of  applications,  including <u>contextualized word and sense representation</u> and <u>Word  Sense  Disambiguation</u>;</li>
             <li> It  is  framed  asa <u>binary  classification</u>  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;</li>
             <li> It is constructed using <u>high quality annotations</u> curated by experts. </li>
@@ -293,35 +326,14 @@ h1{
         <p>
             
         <div style="width: 50px; float: left; vertical-align: middle">
-            <a href="package/WiC_dataset.zip" title="Download the dataset">
+            <a href="package/XLWiC_datasets.zip" title="Download the dataset">
                 <img src="./files/icon.png">
             </a>
         </div>
-        <div style="margin-left: 70px; vertical-align: middle;">
-        <ul>
-            <li>the <a href="package/WiC_dataset.zip">whole package (v1.0)</a>, </li>
-	    <li> the <a href="package/README.txt">README</a> file. </li>
-     <!---        <li>or individual files: 
-                 <br/>[<a href="package/train/train.data.txt">train.data.txt</a>][<a href="package/train/train.gold.txt">train.gold.txt</a>]
-                 <br/>[<a href="package/dev/dev.data.txt">dev.data.txt</a>]
-                 <br/>[<a href="package/README.txt">README.txt</a>]</li> --->
-            </ul>
-        </div>
             <br/>
-        <font color="red"><b>Participate</b></font> in WiC's CodaLab competition: submit your results on the test set and see where you stand in the leaderboard!
-        <br/>Link: <a href="https://competitions.codalab.org/competitions/20010">WiC CodaLab Competition</a>
-        <br/><br/>
-        WiC is featured as a part of the <a href="https://super.gluebenchmark.com/" target="#">SuperGLUE benchmark</a>.
-		<br>
-		<a href="https://super.gluebenchmark.com/" target="#"><img width="170" src="https://super.gluebenchmark.com/assets/images/superglue_logo.svg"></img></a>
-        <br/><br/>
-	WiC was also used for a shared task at <a href="http://www.dfki.de/~declerck/semdeep-5/">SemDeep-5 IJCAI workshop</a>. 
-		
-	
-
-    
-        
-            
+        <font color="red"><b>Participate</b></font> in XLWiC's CodaLab competition:
+            submit your results on the test set and see where you stand in the leaderboard!
+        <br/>Link: <a href="TODO">XLWiC CodaLab Competition</a>
         </div>
 
         <br/><br/><br/><br/><br/><br/>
@@ -329,12 +341,8 @@ h1{
         Please see the following paper:
         <ul>
             <li>
-                <a href="https://arxiv.org/abs/1808.09121">WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations</a><br/>
-        M.T. Pilehvar and J. Camacho-Collados, NAACL 2019 (Minneapolis, USA).<br/>
-		    <i>Note: Results slightly differ between NAACL and Arxiv versions of the paper. Please take results in the Arxiv version, which is more up to date, as baseline for your evaluations.</i><br/>
-        <a href="https://arxiv.org/pdf/1808.09121" title="Get the paper"><img src="./files/pdfs.png"></a>
-        <!--<a href=""><img src="files/bibtex.png"></a>-->
-            </li>
+                <a href="TODO">XL-WiC: A Multilingual Benchmarkfor Evaluating Semantic Contextualization</a><br/>
+        A. Raganato, T. Pasini, J. Camacho-Collados and M.T. Pilehvar, EMNLP 2020.<br/></li>
         </ul>
          
         <br/>
