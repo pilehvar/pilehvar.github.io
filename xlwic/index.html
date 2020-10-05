@@ -107,7 +107,7 @@ h1{
  h3{
 
     font: 400 16px/20px 'Exo', Georgia, serif;
-    color: #FAF5C6;
+
     font-size: 14pt;
      margin-top: 8px;
     margin-bottom: 15px;
@@ -268,7 +268,7 @@ h1{
         
         <br/>
 
-        <div style="float: left; width: 60%;">
+        <div style="float: left; width: 55%;">
         <p style="content; font-size: 11pt;"> 
             Contextualised word embeddings are nowadays pervasive across NLP applications and have shown to effectively
             capture meanings distinctions of the same word in different sentences. Similarly, multilingual models
@@ -306,54 +306,68 @@ h1{
             </ul>
 
         </p>
-        
-    
-         <p style="content; font-size: 11pt;">
-        XL-WiC features multiple interesting characteristics: <br/>
-             <ul>
+
+        </div>
+
+
+    <div style="margin-left: 600px; margin-right: 20px; vertical-align: middle;">
+
+            <h2>Download</h2>
+            <p>
+
+            <div style="width: 70px; float: left; vertical-align: middle">
+
+                <a href="package/XLWiC_datasets.zip" title="Download the dataset">
+                    <img src="./files/icon.png">
+                </a>
+            </div>
+        <div style="margin-left: 70px; vertical-align: middle;">
+            <ul>
+                <li>the <a href="package/WiC_dataset.zip">whole package (v1.0)</a>, </li>
+                <li> the <a href="package/README.txt">README</a> file. </li>
+                <!---        <li>or individual files:
+                            <br/>[<a href="package/train/train.data.txt">train.data.txt</a>][<a href="package/train/train.gold.txt">train.gold.txt</a>]
+                            <br/>[<a href="package/dev/dev.data.txt">dev.data.txt</a>]
+                            <br/>[<a href="package/README.txt">README.txt</a>]</li> --->
+            </ul>
+        </div>
+                <br/>
+            <font color="red"><b>Participate</b></font> in XLWiC's CodaLab competition:
+                submit your results on the test set and see where you stand in the leaderboard!
+            <br/>Link: <a href="TODO">XLWiC CodaLab Competition</a>
+
+
+            <br/><br/><br/>
+            <h2>Dataset details</h2>
+            Please see the following paper:
+            <ul>
+                <li>
+                    <a href="TODO">XL-WiC: A Multilingual Benchmarkfor Evaluating Semantic Contextualization</a><br/>
+                    A. Raganato, T. Pasini, J. Camacho-Collados and M.T. Pilehvar, EMNLP 2020.<br/>
+                </li>
+            </ul>
+        </div>
+    <div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <p style="content; font-size: 11pt;">
+            XL-WiC features multiple interesting characteristics: <br/>
+        <ul>
             <li> It is multilingual, hence, it is suitable for evaluation cross-lingual and multilingual
                 semantic capabilities of models.</li>
             <li> It is suitable  for evaluating a  wide  range  of  applications,  including <u>contextualized word and sense representation</u> and <u>Word  Sense  Disambiguation</u>;</li>
             <li> It  is  framed  asa <u>binary  classification</u>  dataset,  in  which,  unlike <a href="https://www.socher.org/index.php/Main/ImprovingWordRepresentationsViaGlobalContextAndMultipleWordPrototypes" target="#">Stanford Contextual Word Similarity</a> (SCWS), identical words are paired with each other (in different contexts); hence, a context-insensitive word embedding model would perform similarly to a random baseline;</li>
             <li> It is constructed using <u>high quality annotations</u> curated by experts. </li>
-            </ul>
-                </p>
-        </div>
-    
-        <div style="margin-left: 600px; margin-right: 20px; vertical-align: middle;">
-        <br/>
-        <h2>Download</h2>
-        <p>
-            
-        <div style="width: 50px; float: left; vertical-align: middle">
-            <a href="package/XLWiC_datasets.zip" title="Download the dataset">
-                <img src="./files/icon.png">
-            </a>
-        </div>
-            <br/>
-        <font color="red"><b>Participate</b></font> in XLWiC's CodaLab competition:
-            submit your results on the test set and see where you stand in the leaderboard!
-        <br/>Link: <a href="TODO">XLWiC CodaLab Competition</a>
-        </div>
-
-        <br/><br/><br/><br/><br/><br/>
-        <h2>Dataset details</h2>
-        Please see the following paper:
-        <ul>
-            <li>
-                <a href="TODO">XL-WiC: A Multilingual Benchmarkfor Evaluating Semantic Contextualization</a><br/>
-        A. Raganato, T. Pasini, J. Camacho-Collados and M.T. Pilehvar, EMNLP 2020.<br/></li>
         </ul>
-         
-        <br/>
+        </p>
+
         <h2>Examples from the dataset</h2>
-        
+
 
         <table width="90%">
             <tbody><tr>
                 <th align="left">Label</th>
                 <th align="left">Target</th>
-                <th align="left">Context-1</th> 
+                <th align="left">Context-1</th>
                 <th align="left">Context-2</th>
             </tr>
             <tr>
@@ -385,151 +399,61 @@ h1{
                 <td>air</td>
                 <td><u>Air</u> pollution </td>
                 <td>Open a window and let in some <u>air</u></td>
-            </tr>         
+            </tr>
             <tr>
                 <td>T</td>
                 <td>window</td>
                 <td>The expanded <u>window</u> will give us time to catch the thieves</td>
                 <td>You have a two-hour <u>window</u> of clear weather to finish working on the lawn</td>
-            </tr>                   
-                
+            </tr>
+
         </tbody></table>
 
+    </div>
 
-        
-        
         <br/><br/>
         <h2>State-of-the-Art</h2>
-        <p></p>
-
-	       <table width="70%">
+        <h3>0-Shot WordNet</h3>
+        <ul>
+            <li>Training: EN</li>
+            <li>Dev: EN</li>
+            <li>Test: WordNet test sets</li>
+            <li>Download data: <a href="">0_shot_wordnet.zip</a></li>
+        </ul>
+	       <table width="90%">
             <tbody><tr>
-                <th align="left" width="50%">Sentence-level contextualised embeddings</th>
-		<th align="left" width="30%">Implementation</th>
-                <th align="left">Accuracy %</th>
-            </tr> 
-	    <tr>
-		<td><a href="https://arxiv.org/abs/1908.05646" target="#">SenseBERT-large</a>&#8224;</td>
-   		<td>Levine et al (2019)</td>
-                <td><b>72.1</b></td>
-            </tr>
-	   
-	    <tr>
-		<td><a href="https://arxiv.org/abs/1909.04164" target="#">KnowBERT-W+W</a>&#8224;</td>
-   		<td>Peters et al (2019)</td>
-                <td>70.9</td>
-            </tr>
-            <tr>
-		<td><a href="https://arxiv.org/abs/1907.11692" target="#">RoBERTa</a></td>
-   		<td>Liu et al (2019)</td>
-                <td>69.9</td>
-            </tr>
-            <tr>
-		<td><a href="https://super.gluebenchmark.com/leaderboard" target="#">BERT-large</a></td>
-   		<td>Wang et al (2019)</td>
-                <td>69.6</td>
-            </tr>
-            <tr>
-                <td>Ensemble</td>
-   		<td>Gari Soler et al (2019)</td>
-                <td>66.7</td>
+		        <th align="left" width="30%">Implementation</th>
+                <th align="left">BG</th>
+                <th align="left">DA</th>
+                <th align="left">ET</th>
+                <th align="left">FA</th>
+                <th align="left">HR</th>
+                <th align="left">JA</th>
+                <th align="left">KO</th>
+                <th align="left">NL</th>
+                <th align="left">ZH</th>
             </tr>
 	    <tr>
-                <td>ELMo-weighted</td>
-      		<td>Ansell et al (2019)</td>
-                <td>61.2</td>
-            </tr>
-	</tbody></table>    
+    </tbody></table><br/>
+        <h3>0-Shot Wiktionary</h3>
+        <ul>
+            <li>Training: EN</li>
+            <li>Dev: EN</li>
+            <li>Test: Wiktionary test sets.</li>
+        </ul>
 		    
-		    
-	       <table width="70%">
+	       <table width="90%">
             <tbody><tr>
-                <th align="left" width="50%">Word-level contextualised embeddings</th>
-		<th align="left" width="30%">Implementation</th>
-                <th align="left">Accuracy %</th>
+		        <th align="left" width="30%">Implementation</th>
+                <th align="left">DE</th>
+                <th align="left">FR</th>
+                <th align="left">IT</th>
             </tr>   
-            <tr>
-		<td><a href="https://www.aclweb.org/anthology/P19-1569/" target="#">WSD</a>&#8224;</td>
-   		<td>Loureiro and Jorge (2019)</td>
-                <td>67.7</td>
-            </tr>
-	   <tr>
-                <td>BERT-large</td>
-      		<td>WiC's paper</td>
-                <td>65.5</td>
-            </tr>
+            </tbody></table><br/>
 
-	    <tr>
-                <td>Context2vec</td>
-   		<td>WiC's paper</td>
-                <td>59.3</td>
-            </tr>   
-	   
-            <tr>
-                <td>Elmo</td>
-       		<td>WiC's paper</td>
-                <td>57.7</td>
-            </tr>
-		    
-            </tbody></table>
-            
-            <table width="70%">
-            <tbody><tr>
-                <th align="left" width="50%">Sense representations</th>
-		<th align="left" width="30%"></th>
-                <th align="left"></th>
-            </tr>
-            
-            <tr>
-	        <td><a href="https://www.mitpressjournals.org/doi/abs/10.1162/COLI_a_00375" target="#">LessLex</a></td>
-	        <td>Colla et al (2020)</td>
-                <td>59.2</td>
-            </tr>
-            
-            <tr>
-                <td>DeConf</td>
-       		<td>WiC's paper</td>
-                <td>58.7</td>
-            </tr>
-            <tr>
-                <td>SW2V</td>
-       		<td>WiC's paper</td>
-                <td>58.1</td>
-            </tr>
-            <tr>
-                <td>JBT</td>
-       		<td>WiC's paper</td>
-                <td>53.6</td>
-            </tr>
-            </tbody></table>
-            
-            <table width="70%">
-            <tbody><tr>
-                <th align="left" width="50%">Sentence level baselines</th>
-                <th align="left" width="30%"></th>
-                <th align="left"></th>
-            </tr>        
-                
-            <tr>
-                <td>Sentence Bag-of-words</td>
-       		<td>WiC's paper</td>
-                <td>58.7</td>
-            </tr>
-            <tr>
-                <td>Sentence LSTM</td>
-       		<td>WiC's paper</td>
-                <td>53.1</td>
-            </tr>            
-                
-        </tbody></table>
+
 	
-	 <table width="70%">
-		    <tbody><tr>
-			<th align="left" width="50%">Random baseline</th>
-			<th align="left" width="30%"></th>
-			<th align="left">50.0</th>
-		    </tr>  
-		</tbody></table>
+
 &#8224; Use external knowledge resources
 		<br/><br/>
 
@@ -552,94 +476,16 @@ h1{
 
 	    <br/><br/>
 	
-	<button onclick="myFunction()">View results for the old version (v0.1)</button><br/><br/>
-	<div id="myDIV" title="Results on preliminary version of WiC" style="display:none;">
-            
-        <table width="60%">
-            <tbody><tr>
-                <th align="left" width="70%">Contextualised word embeddings</th>
-                <th align="left">Accuracy percentage</th>
-            </tr>
-            <tr>
-                <td>Context2vec</td>
-                <td>59.2</td>
-            </tr>
-            <tr>
-                <td>Elmo-3</td>
-                <td>57.4</td>
-            </tr>
-            <tr>
-                <td>Elmo-1</td>
-                <td>56.3</td>
-            </tr>
-            </tbody></table>
-            
-            <table width="60%">
-            <tbody><tr>
-                <th align="left" width="70%">Sense representations</th>
-                <th align="left"></th>
-            </tr>
-            <tr>
-                <td>DeConf</td>
-                <td>59.4</td>
-            </tr>
-            <tr>
-                <td>SW2V</td>
-                <td>58.1</td>
-            </tr>
-            <tr>
-                <td>JBT</td>
-                <td>53.9</td>
-            </tr>
-            </tbody></table>
-            
-            <table width="60%">
-            <tbody><tr>
-                <th align="left" width="70%">Sentence level baselines</th>
-                <th align="left"></th>
-            </tr>        
-                
-            <tr>
-                <td>Sentence Bag-of-words</td>
-                <td>59.3</td>
-            </tr>
-            <tr>
-                <td>Sentence LSTM</td>
-                <td>53.2</td>
-            </tr>            
-                
-        </tbody></table>
-		
-	</div>
-    
-      <br/>
     <h2>Licensing</h2>
 	
 	This dataset is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" target="#">Creative Commons Attribution-NonCommercial 4.0 License</a>.
 
-	<br/>
     <h2>References</h2>
-    <ul>
-<li>[LessLex] Davide Colla, Enrico Mensa and Daniele P. Radicioni. LessLex: Linking Multilingual Embeddings to SenSe Representations of LEXical Items. Computational Linguistics, 2020.</li>
-<li>[SenseBERT] Yoav Levine, Barak Lenz, Or Dagan, Dan Padnos, Or Sharir, Shai Shalev-Shwartz, Amnon Shashua, Yoav Shoham. SenseBERT: Driving Some Sense into BERT. Arxiv 2019. </li>  
-    <li>[KnowBERT] Matthew E. Peters, Mark Neumann, Robert Logan, Roy Schwartz, Vidur Joshi, Sameer Singh, Noah A. Smith. Knowledge Enhanced Contextual Word Representations. EMNLP 2019. </li>
-	    <li>[RoBERTa] Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, Veselin Stoyanov. RoBERTa: A Robustly Optimized BERT Pretraining Approach. Arxiv 2019. </li>  
-    <li>[BERT] Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. arXiv:1810.04805 2018.</li>
-    <li>[Context2vec]
-    Oren  Melamud,  Jacob  Goldberger,  and  Ido  Dagan. Context2vec: Learning generic context embedding with bidirectional LSTM. CoNLL 2016.</li>
-    <li>[Elmo] Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer. Deep contextualized word representations. NAACL 2018.</li>
-    <li>[DeConf] Mohammad Taher Pilehvar and Nigel Collier. De-Conflated Semantic Representations. EMNLP 2016.</li>
-    <li>[SW2V] Massimiliano Mancini, Jose Camacho-Collados, Ignacio Iacobacci, and Roberto Navigli. Embedding words and senses together via joint knowledge-enhanced training. CoNLL 2017.</li>
-    <li>[JBT] Maria Pelevina, Nikolay Arefyev, Chris Biemann, and Alexander Panchenko. Making sense of word embeddings. RepL4NLP 2016.</li>
-    <li>[WSD] Daniel Loureiro and Alípio Jorge. LIAAD at SemDeep-5 Challenge:  Word-in-Context (WiC). SemDeep 2019.</li>
-    <li>[Ensemble] Aina Garí Soler, Marianna Apidianaki and Alexandre Allauzen. LIMSI-MULTISEM at the IJCAI SemDeep-5 WiC Challenge: Context Representations for Word Usage Similarity Estimation. SemDeep 2019.</li>
-    <li>[ELMo-weighted] Alan Ansell, Felipe Bravo-Marquez and Bernhard Pfahringer. An ELMo-inspired approach to SemDeep-5's Word-in-Context task. SemDeep 2019.</li>
-    <li>[SuperGLUE] Alex Wang, Yada Pruksachatkun, Nikita Nangia, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, Samuel R. Bowman. SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems.</li>
-    </ul>
-    </p>
+
     </div>
     
-</div>    
+</div>
+
     <br/>
     <br/>
     <br/>
