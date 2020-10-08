@@ -52,6 +52,16 @@ body{
 a{
         text-decoration: none;
     }
+
+a.hyper:link, a.hyper:visited {
+        color: #FAD450;
+    }
+
+a.hyper:hover {
+        color: firebrick;
+    }
+
+
     
 a:link{
         color:firebrick;
@@ -109,6 +119,15 @@ h1{
     font: 400 16px/20px 'Exo', Georgia, serif;
     color: #FAF5C6;
     font-size: 14pt;
+     margin-top: 8px;
+    margin-bottom: 15px;
+}  
+
+ h4{
+
+    font: 400 16px/20px 'Exo', Georgia, serif;
+    color: red;
+    font-size: 12pt;
      margin-top: 8px;
     margin-bottom: 15px;
 }  
@@ -247,9 +266,11 @@ h1{
 
 
 <div id="wrapper">
-    <header style="height: 80px; background-color:#222222">
-        <font color="white"><h1>WiC: The Word-in-Context Dataset</h1></font>
+    <header style="height: 110px; background-color:#222222">
+        <font color="white"><h1>WiC: The Word-in-Context Dataset (English)</h1></font>
         <font color="white"><h3>A reliable benchmark for the evaluation of context-sensitive word embeddings</h3></font>
+        <h4>(New!) <a href="https://pilehvar.github.io/xlwic/" class="hyper">[XL-WiC]</a> - WiC in 12 other languages!</h4>
+
         <div  style="width: 200px; margin-left: 20px; float: left; vertical-align: middle">
             <a href="http://ltl.mml.cam.ac.uk/" title="Go to LTL homepage">
                 <!--<img src="./files/cambridge_logo_blue.png">-->
