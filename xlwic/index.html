@@ -392,15 +392,15 @@
 
             <div style="width: 70px; float: left; vertical-align: middle">
 
-                <a href="package/XLWiC_datasets.zip" title="Download the dataset">
+                <a href="data/xlwic_datasets.zip" title="Download the dataset">
                     <img src="./files/icon.png">
                 </a>
             </div>
             <div style="margin-left: 70px; vertical-align: middle;">
                 <ul>
-                    <li>the <a href="package/WiC_dataset.zip">whole package (v1.0)</a>,</li>
-                    <li> the <a href="package/README.txt">README</a> file.</li>
-                    <!---        <li>or individual files:
+                    <li>the <a href="data/xlwic_datasets.zip">whole package (v1.0)</a>,</li>
+                    <!---<li> the <a href="package/README.txt">README</a> file.</li>
+                            <li>or individual files:
                                 <br/>[<a href="package/train/train.data.txt">train.data.txt</a>][<a href="package/train/train.gold.txt">train.gold.txt</a>]
                                 <br/>[<a href="package/dev/dev.data.txt">dev.data.txt</a>]
                                 <br/>[<a href="package/README.txt">README.txt</a>]</li> --->
@@ -414,7 +414,8 @@
             <br/><br/><br/>
             <h2>Dataset details</h2>
             <p>Please see the following paper:</p>
-            <p><a href="TODO">XL-WiC: A Multilingual Benchmarkfor Evaluating Semantic Contextualization</a>
+            <p><a href="./data/xlwic_emnlp2020.pdf">XL-WiC: A Multilingual Benchmarkfor Evaluating Semantic
+                Contextualization</a>
                 <br/>
                 <cite><a style="color:black" href="https://raganato.github.io/" target="_blank">A. Raganato</a></cite>,
                 <cite><a style="color:black" href="https://pasinit.github.io" target="_blank">T. Pasini</a></cite>,
@@ -424,6 +425,19 @@
                 <cite><a style="color:black" href="https://pilehvar.github.io/" target="_blank">M.T. Pilehvar</a></cite>
                 <br/>
                 <cite><a style="color:black" href="https://2020.emnlp.org/" target="_blank">EMNLP 2020.</a></cite></p>
+            <!--<font>
+                <pre>
+                    <code>
+                        @inproceedings{scarlini-etal-2020-ares,
+	  title={{With More Contexts Comes Better Performance: Contextualized Sense Embeddings for All-Round Word Sense Disambiguation}},
+	  author={Scarlini, Bianca and Pasini, Tommaso and Navigli, Roberto},
+	  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing},
+	  publisher={Association for Computational Linguistics},
+	  year={2020}
+	}
+                    </code>
+                </pre>
+            </font>-->
         </div>
 
         <div>
@@ -523,7 +537,7 @@
             <li>Training: EN</li>
             <li>Dev: EN</li>
             <li>Test: WordNet test sets</li>
-            <li>Download data: <a href="">0_shot_wordnet.zip</a></li>
+            <li>Download data: <a href="data/xlwic_wn_zshot.zip">0_shot_wordnet.zip</a></li>
         </ul>
         <table width="100%" style="border-bottom: 1px solid black; border-top:1px solid black;">
             <tbody>
@@ -612,7 +626,7 @@
             <li>Dev: EN</li>
             <li>Test: Wiktionary test sets.</li>
             <li>Table 6, first group.</li>
-            <li>Download data: <a href="">0_shot_wiktionary.zip</a></li>
+            <li>Download data: <a href="data/xlwic_wikt_zshot.zip">0_shot_wiktionary.zip</a></li>
         </ul>
 
         <table width="100%" style="border-bottom: 1px solid black; border-top:1px solid black;">
@@ -658,10 +672,12 @@
             <li>Dev: Target Language.</li>
             <li>Test: Wiktionary test sets.</li>
             <li>Table 4, second group.</li>
-            <li>Download data: <a href="">mono_wiktionary.zip</a></li>
+            <li>Download data: <a href="data/xlwic_wikt_monolingual.zip">mono_wiktionary.zip</a></li>
         </ul>
-        <p><b>IV = In-Vocabulary evaluation.</b> The test sets only contain words that <b>do</b> appear in the training sets.</p>
-        <p><b>OOV = Out-Of-Vocabulary evaluation.</b> Te test sets only contain words that <b>do not</b> appear in the training sets</p>
+        <p><b>IV = In-Vocabulary evaluation.</b> The test sets only contain words that <b>do</b> appear in the training
+            sets.</p>
+        <p><b>OOV = Out-Of-Vocabulary evaluation.</b> Te test sets only contain words that <b>do not</b> appear in the
+            training sets</p>
 
         <table width="100%" style="border-bottom: 1px solid black; border-top:1px solid black;">
             <tbody>
@@ -754,7 +770,7 @@
             </tr>
             <tr>
                 <td align="left" style="text-align: left"> L-BERT*</td>
-                <td align="left">82.90</td>
+                <td align="left"> 82.90</td>
                 <td align="left"> 83.23</td>
                 <td align="left"> 76.64</td>
                 <td></td>
