@@ -537,7 +537,7 @@
             <li>Training: EN</li>
             <li>Dev: EN</li>
             <li>Test: WordNet test sets</li>
-            <li>Download data: <a href="data/xlwic_wn_zshot.zip">xlwic_wn_zshot.zip</a></li>
+            <li>Download data: <a href="data/xlwic_wn_zshot.zip">xlwic_wn_zshotg.zip</a></li>
         </ul>
         <table width="100%" style="border-bottom: 1px solid black; border-top:1px solid black;">
             <tbody>
@@ -787,12 +787,13 @@
             </tbody>
         </table>
         <br/>
-        * L-BERT stands for language-specific BERT. We used the model made available by
-        <a href="https://github.com/TurkuNLP/wikibert">TurkuNLP</a> trained on the language-specific versions of
-        Wikipedia.
-
-
-        <br/><br/>
+        * L-BERT stands for language-specific BERT. We used the following language-specific models: 
+	 <ul>
+            <li>DE: BERT-de huggingface.co/dbmdz/bert-base-german-cased</li>
+            <li>FR: CamemBERT-large (Martin et al., 2020)</li>
+            <li>IT: BERT-it huggingface.co/dbmdz/bert-base-italian-xxl-cased</li>
+        </ul>
+	<br/><br/>
 
         <h2>Licensing</h2>
 
@@ -814,6 +815,12 @@
                 Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova.
                 NAACL 2019.
             </li>
+		<li>
+		<a href="https://www.aclweb.org/anthology/2020.acl-main.645/">CamemBERT: a tasty French language model.</a>
+		Louis Martin, Benjamin Muller, Pedro Javier Ortiz Suárez, Yoann Dupont, Laurent Romary, Éric de la Clergerie, Djamé Seddah, and Benoı̂t Sagot.
+		ACL 2020. 
+		</li>
+
         </ul>
     </div>
 
