@@ -10,7 +10,7 @@ Datasets are organized per type:
 - xlwic_wn_xlingual/ contains English train and validation datasets from the English WiC dataset, and validation and test datasets extracted from WordNet for each language.
 
 The files follow a tab-separated format:
-target_word <tab> PoS <tab> start-index_1 <tab> end-index_1 <tab> start-index_2 <tab> end-index_2 <tab> example_1 <tab> example_2 <tab> label
+target_word <tab> PoS <tab> start-char-index_1 <tab> end-char-index_1 <tab> start-char-index_2 <tab> end-char-index_2 <tab> example_1 <tab> example_2 <tab> label
 
 - "target_word": the target word which is present in both examples.
 - "PoS": the Part-of-Speech tag of the target word (either "N": noun or "V": verb).
