@@ -20,7 +20,7 @@ target_word <tab> PoS <tab> start-index_1 <tab> end-index_1 <tab> start-index_2 
 - "label": can be 1 or 0 depending on whether the intended sense of the target word is the same in both examples or not.
 
 
-NOTE 1: The gold test labels are kept secret as it is being used as the basis for a public competition in CodaLab: URL
+NOTE 1: The gold test labels are kept secret as it is being used as the basis for a public competition in CodaLab: https://competitions.codalab.org/competitions/27071
 
 
 For further details, please see https://pilehvar.github.io/xlwic/
