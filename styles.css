@@ -84,6 +84,34 @@ a img{border:0px;}
 #background .content{overflow:auto;}
 #background .col-mid{margin:0px 65px;}
 
+
+
+/****************************************************/
+/* STUDENT SECTION */
+/****************************************************/
+
+#students{margin:0px 43px; padding-top:85px;}
+#students .content{overflow:auto;}
+#students #news-thumbs li{
+	line-style:none;
+	float:left;
+	margin:0px 20px 15px 0px;
+	padding-left: 16px; 
+}
+
+#students #news-thumbs li:before{
+	content: "•";
+	padding-right: 8px;
+}
+
+#students #news-thumbs .headline{
+	color:#2B3856;
+	float:left;
+}
+
+#students #news-thumbs li.last{margin:0px;}
+
+
 /****************************************************/
 /* WORK SECTION */
 /****************************************************/
@@ -136,41 +164,6 @@ a img{border:0px;}
 	margin-right:0px;
 	padding: 5px 45px;
 }
-
-
-/****************************************************/
-/* STUDENT SECTION */
-/****************************************************/
-#students{margin:0px 43px; padding-top:115px;}
-#students .content{overflow:auto;}
-
-#students #email li{
-	font: 400 14px/16px 'Courier New', Courier, monospace;
-	list-style:none;
-	float:left;
-	margin:5px 0px 0px 0px;
-	padding:0px;
-}
-
-#students #social-footer{
-	width:300px;
-	float:left;
-	margin-left:75px;
-}
-#students #social-footer #sm-links{margin-top:25px;}
-#students #sm-links li{
-	list-style:none;
-	float:right;
-}
-#students #sm-links li a{
-	display:block;
-	text-indent:-9999px;
-	width:26px; 
-	height:26px;
-	margin-right:10px;
-}
-
-#students #sm-links li a.linkedin{background:url(main/images/sm-linkedin-icon.png) no-repeat;}
 
 
 /****************************************************/
